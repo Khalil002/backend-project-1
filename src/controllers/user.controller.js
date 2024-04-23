@@ -2,6 +2,7 @@ const User = require('../models/user.model');
 
 async function createUser(req, res) {
   const { name, email, password, phone, type } = req.body;
+  console.log("hello?")
   try {
     const newUser = new User({ name, email, password, phone, type });
     await newUser.save();
